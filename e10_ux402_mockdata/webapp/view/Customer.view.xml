@@ -1,0 +1,24 @@
+<mvc:View controllerName="student00.com.sap.training.ux402.mockdata.ux402mockdata.controller.Customer"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="CustomerPage" title="{i18n>overviewPageTitle}">
+     <Table id="customerTable" items="{/BusinessPartnerSet}">
+            <columns>
+                <Column id="column1" minScreenWidth="Tablet" demandPopin="true">
+                    <Text id="text1" text="{i18n>columnId}"/>
+                </Column>
+                <Column id="column2" minScreenWidth="Tablet" demandPopin="true">
+                    <Text id="text2" text="{i18n>columnName}"/>
+                </Column>                                                            
+            </columns>
+            <items>
+                <ColumnListItem id="columnListItem1" press="onPress" type="Navigation" >
+                    <cells>
+                        <ObjectIdentifier id="objectIdentifier1" title="{BusinessPartnerID}" />
+                        <Text id="text3" text="{CompanyName}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>   
+    </Page>
+</mvc:View>

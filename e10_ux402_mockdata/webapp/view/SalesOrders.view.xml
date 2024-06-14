@@ -1,0 +1,51 @@
+<mvc:View controllerName="student00.com.sap.training.ux402.mockdata.ux402mockdata.controller.SalesOrders"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+   <Page id="idSalesPage" navButtonPress="onNavBack" showNavButton="true" title="{CompanyName}">
+        <content>
+            <l:VerticalLayout id="idVerticalLayout">
+             <ObjectHeader id="idCustomerInfo" title="{CompanyName}" number="" numberUnit="{CurrencyCode}" titleHref="{WebAddress}">
+                   <attributes>
+                        <ObjectAttribute id="idCustomerID" text="{BusinessPartnerID}"></ObjectAttribute>
+                        <ObjectAttribute id="idURL" text="{WebAddress}"></ObjectAttribute>
+                    </attributes> 
+                </ObjectHeader>             
+            </l:VerticalLayout>
+            <Table  id="idSales"
+                items="{path: 'ToSalesOrders', sorter: {path: 'CustomerID'}}" 
+                mode="SingleSelectMaster" 
+                growing="true" 
+                growingThreshold="10">
+                <headerToolbar>
+                    <Toolbar id="toolbar1">
+                        <Title id="title1" text="Sales Orders" level="H2"/>
+                    </Toolbar>                
+                </headerToolbar>
+                <columns>
+                    <Column id="column1" width="12em">
+                        <Text id="text1" text="{i18n>customername}"/>                
+                    </Column>
+                    <Column id="column2" minScreenWidth="Tablet" demandPopin="true">
+                        <Text id="text2" text="{i18n>salesorderid}"/>
+                    </Column>
+                    <Column id="column3" minScreenWidth="Tablet" demandPopin="true">
+                        <Text id="text3" text="{i18n>grossamount}"/>
+                    </Column>
+                    <Column id="column4" minScreenWidth="Tablet" demandPopin="true">
+                        <Text id="text4" text="{i18n>netamount}"/>
+                    </Column>        
+                </columns>
+                <items>
+                    <ColumnListItem id="columnListItem1">
+                        <cells>
+                            <ObjectIdentifier id="objectIdentifier1" title="{CustomerID}" text="{CustomerID}"/>
+                            <Text id="text5" text="{SalesOrderID}"/>
+                            <Text id="text6" text="{GrossAmount}"/>
+                            <Text id="text7" text="{NetAmount}"/>      
+                        </cells>
+                    </ColumnListItem>
+                </items>                                
+            </Table>                      
+        </content>            
+    </Page>        
+</mvc:View>
