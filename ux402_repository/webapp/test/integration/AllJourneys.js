@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "student02.com.sap.training.ux402.repository.ux402repository.view.",
+		viewNamespace: "student02.com.sap.training.ux402.repositor.ux402repository.view.",
 		autoWait: true
 	});
 });

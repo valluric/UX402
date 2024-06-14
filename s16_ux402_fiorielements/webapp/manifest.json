@@ -1,7 +1,7 @@
 {
   "_version": "1.37.0",
   "sap.app": {
-    "id": "student02.com.sap.training.ux402.fiorielements.ux402fiorielements",
+    "id": "student00.com.sap.training.ux402.fiorielements.ux402fiorielements",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -12,27 +12,27 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.13.6",
-      "toolsId": "079c5093-4702-4feb-b01c-0f5e573bdea6"
+      "version": "1.8.5",
+      "toolsId": "f0e6403c-1181-4447-89ba-6a90ed54ced4"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/sap/ZUX402FLIGHTUI02_CDS/",
+        "uri": "/sap/opu/odata/sap/ZUX402FLIGHTUI04_CDS/",
         "type": "OData",
         "settings": {
           "annotations": [
-            "ZUX402FLIGHTUI02_CDS_VAN",
+            "ZUX402FLIGHTUI04_CDS_VAN",
             "annotation"
           ],
           "localUri": "localService/metadata.xml",
           "odataVersion": "2.0"
         }
       },
-      "ZUX402FLIGHTUI02_CDS_VAN": {
-        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZUX402FLIGHTUI02_CDS_VAN',Version='0001')/$value/",
+      "ZUX402FLIGHTUI04_CDS_VAN": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZUX402FLIGHTUI04_CDS_VAN',Version='0001')/$value/",
         "type": "ODataAnnotation",
         "settings": {
-          "localUri": "localService/ZUX402FLIGHTUI02_CDS_VAN.xml"
+          "localUri": "localService/ZUX402FLIGHTUI04_CDS_VAN.xml"
         }
       },
       "annotation": {
@@ -63,7 +63,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.96.29",
+      "minUI5Version": "1.96.16",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -82,7 +82,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "student02.com.sap.training.ux402.fiorielements.ux402fiorielements.i18n.i18n"
+          "bundleName": "student00.com.sap.training.ux402.fiorielements.ux402fiorielements.i18n.i18n"
         }
       },
       "": {
@@ -120,8 +120,8 @@
       "showDraftToggle": false
     },
     "pages": {
-      "ListReport|ZUX402FLIGHTUI02": {
-        "entitySet": "ZUX402FLIGHTUI02",
+      "ListReport|ZUX402FLIGHTUI04": {
+        "entitySet": "ZUX402FLIGHTUI04",
         "component": {
           "name": "sap.suite.ui.generic.template.ListReport",
           "list": true,
@@ -133,15 +133,12 @@
               "dateSettings": {
                 "useDateRange": true
               }
-            },
-            "tableSettings": {
-              "type": "ResponsiveTable"
             }
           }
         },
         "pages": {
-          "ObjectPage|ZUX402FLIGHTUI02": {
-            "entitySet": "ZUX402FLIGHTUI02",
+          "ObjectPage|ZUX402FLIGHTUI04": {
+            "entitySet": "ZUX402FLIGHTUI04",
             "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
             "component": {
               "name": "sap.suite.ui.generic.template.ObjectPage"

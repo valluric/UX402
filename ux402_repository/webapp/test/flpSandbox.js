@@ -40,7 +40,7 @@ sap.ui.define([
 								"tileType": "sap.ushell.ui.tile.StaticTile",
 								"properties": {
 									"title": "Repository-integration",
-									"targetURL": "#student02comsaptrainingux402repositoryux402repository-display"
+									"targetURL": "#student02comsaptrainingux402repositorux402repository-display"
 								}
 							}]
 						}]
@@ -51,8 +51,8 @@ sap.ui.define([
 				"adapter": {
 					"config": {
 						"inbounds": {
-							"student02comsaptrainingux402repositoryux402repository-display": {
-								"semanticObject": "student02comsaptrainingux402repositoryux402repository",
+							"student02comsaptrainingux402repositorux402repository-display": {
+								"semanticObject": "student02comsaptrainingux402repositorux402repository",
 								"action": "display",
 								"description": "An SAP Fiori application.",
 								"title": "Repository-integration",
@@ -61,8 +61,8 @@ sap.ui.define([
 								},
 								"resolutionResult": {
 									"applicationType": "SAPUI5",
-									"additionalInformation": "SAPUI5.Component=student02.com.sap.training.ux402.repository.ux402repository",
-									"url": sap.ui.require.toUrl("student02/com/sap/training/ux402/repository/ux402repository")
+									"additionalInformation": "SAPUI5.Component=student02.com.sap.training.ux402.repositor.ux402repository",
+									"url": sap.ui.require.toUrl("student02/com/sap/training/ux402/repositor/ux402repository")
 								}
 							}
 						}

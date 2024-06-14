@@ -1,31 +1,42 @@
 {
-  "name": "ux402_fiorielements",
-  "version": "0.0.1",
-  "private": true,
-  "description": "An SAP Fiori application.",
-  "keywords": [
-    "ui5",
-    "openui5",
-    "sapui5"
-  ],
-  "main": "webapp/index.html",
-  "dependencies": {},
-  "devDependencies": {
-    "@ui5/cli": "^3.0.0",
-    "@sap/ux-ui5-tooling": "1",
-    "@sap/ux-specification": "UI5-1.96",
-    "@sap-ux/ui5-middleware-fe-mockserver": "2"
-  },
-  "scripts": {
-    "start": "fiori run --open \"test/flpSandbox.html?sap-client=100&sap-ui-xx-viewCache=false#student02comsaptrainingux402fi-tile\"",
-    "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-client=100&sap-ui-xx-viewCache=false#student02comsaptrainingux402fi-tile\"",
-    "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
-    "start-mock": "fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-client=100&sap-ui-xx-viewCache=false#student02comsaptrainingux402fi-tile\"",
-    "deploy": "fiori verify",
-    "deploy-config": "fiori add deploy-config",
-    "start-noflp": "fiori run --open \"index.html?sap-client=100&sap-ui-xx-viewCache=false\"",
-    "start-variants-management": "fiori run --open \"preview.html?&sap-client=100&sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\""
-  },
-  "sapux": true,
-  "sapuxLayer": "CUSTOMER_BASE"
+    "name": "ux402_fiorielements",
+    "version": "0.0.1",
+    "private": true,
+    "description": "A Fiori-elements Application.",
+    "keywords": [
+        "ui5",
+        "openui5",
+        "sapui5"
+    ],
+    "main": "webapp/index.html",
+    "dependencies": {},
+    "devDependencies": {
+        "@ui5/cli": "^2.14.1",
+        "@sap/ux-ui5-tooling": "1",
+        "@sap/ux-specification": "UI5-1.96",
+        "@sap-ux/ui5-middleware-fe-mockserver": "2",
+        "rimraf": "^3.0.2",
+        "ui5-task-flatten-library": "0.2.5"
+    },
+    "scripts": {
+        "start": "fiori run --open \"test/flpSandbox.html?sap-client=100&sap-ui-xx-viewCache=false#student00comsaptrainingux402fiorielementsux402fiorielements-tile\"",
+        "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-client=100&sap-ui-xx-viewCache=false#student00comsaptrainingux402fiorielementsux402fiorielements-tile\"",
+        "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
+        "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
+        "deploy-config": "fiori add deploy-config",
+        "start-noflp": "fiori run --open \"index.html?sap-client=100&sap-ui-xx-viewCache=false\"",
+        "start-mock": "fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-client=100&sap-ui-xx-viewCache=false#student00comsaptrainingux402fiorielementsux402fiorielements-tile\"",
+        "start-variants-management": "fiori run --open \"preview.html?&sap-client=100&sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
+        "undeploy": "fiori undeploy --config ui5-deploy.yaml",
+        "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
+    },
+    "ui5": {
+        "dependencies": [
+            "@sap/ux-ui5-tooling",
+            "@sap-ux/ui5-middleware-fe-mockserver",
+            "ui5-task-flatten-library"
+        ]
+    },
+    "sapux": true,
+    "sapuxLayer": "CUSTOMER_BASE"
 }

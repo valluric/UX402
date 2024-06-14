@@ -4,7 +4,7 @@ sap.ui.define([
 function (Controller) {
     "use strict";
 
-    return Controller.extend("student02.com.sap.training.ux402.repository.ux402repository.controller.Main", {
+    return Controller.extend("student02.com.sap.training.ux402.repositor.ux402repository.controller.Main", {
         onInit: function () {
 
         }

@@ -1,0 +1,177 @@
+{
+  "_version": "1.37.0",
+  "sap.app": {
+    "id": "com.sap.training.ux402.deepinsert.ux402_deepinsert",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+	"resources": "resources.json",
+	"sourceTemplate": {
+		"id": "@sap/generator-fiori:basic",
+		"version": "1.8.0",
+		"toolsId": "7966548b-f300-4efe-b7ee-d7b48b10471b"
+	  },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/iwbep/GWSAMPLE_BASIC/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": ["sap_hcb", "sap_belize"]
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.sap.training.ux402.deepinsert.ux402_deepinsert.view.App",
+      "type": "XML"
+    },
+    "dependencies": {
+        "minUI5Version": "1.36.0",
+	    "libs": {
+			"sap.ui.core": {
+				"minVersion": "1.36.0"
+			},
+			"sap.m": {
+				"minVersion": "1.36.0"
+			},
+			"sap.ui.layout": {
+				"minVersion": "1.36.0"
+			},
+			"sap.ushell": {
+				"minVersion": "1.36.0"
+			}
+		}
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.sap.training.ux402.deepinsert.ux402_deepinsert.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "settings": {
+			"metadataUrlParams": {
+				"sap-documentation": "heading"
+			}
+		}
+      }
+    },
+    "services": {
+			"ShellUIService": {
+				"factoryName": "sap.ushell.ui5service.ShellUIService",
+				"lazy": false,
+				"settings": {
+					"setHierarchy": "auto",
+					"setTitle": "auto"
+			}
+		}
+	},
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+			"routerClass": "sap.m.routing.Router",
+			"viewType": "XML",
+			"viewPath": "com.sap.training.ux402.deepinsert.ux402_deepinsert.view",
+			"controlId": "app",
+			"controlAggregation": "pages",
+			"bypassed": {
+				"target": [
+					"notFound"
+				]
+			},
+			"async": true
+		},
+		"routes": [{
+			"name": "main",
+			"pattern": "",
+			"titleTarget": "",
+			"greedy": false,
+			"target": ["main"]
+			}, {
+			"name": "CreateSalesOrder",
+			"pattern": "CreateSalesOrder",
+			"titleTarget": "",
+			"greedy": false,
+			"target": ["CreateSalesOrder"]
+			}, {
+			"name": "Details",
+			"pattern": "{entity}",
+			"titleTarget": "",
+			"greedy": false,
+			"target": ["Details"]
+			}],
+		"targets": {
+			"main": {
+				"viewType": "XML",
+				"transition": "slide",
+				"clearAggregation": true,
+				"viewName": "Master",
+				"viewLevel": 1,
+				"viewId": "Master",
+				"controlAggregation": "pages"
+			},
+			"CreateSalesOrder": {
+				"viewType": "XML",
+				"transition": "slide",
+				"clearAggregation": true,
+				"viewName": "CreateSalesOrder",
+				"viewId": "CreateSalesorder",
+				"controlAggregation": "pages",
+				"viewLevel": 1
+			},
+			"Details": {
+				"viewType": "XML",
+				"transition": "slide",
+				"clearAggregation": true,
+				"viewName": "Details",
+				"viewLevel": 1,
+				"viewId": "Details",
+				"controlAggregation": "pages"
+			},
+			"objectNotFound": {
+				"viewName": "ObjectNotFound",
+				"viewId": "objectNotFound"
+			},
+			"notFound": {
+				"viewName": "NotFound",
+				"viewId": "notFound"
+			}
+		}
+    }
+  }
+}

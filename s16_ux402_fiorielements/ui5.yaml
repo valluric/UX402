@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
 
-specVersion: "3.1"
+specVersion: "2.5"
 metadata:
-  name: student02.com.sap.training.ux402.fiorielements.ux402fiorielements
+  name: student00.com.sap.training.ux402.fiorielements.ux402fiorielements
 type: application
 server:
   customMiddleware:
@@ -14,6 +14,7 @@ server:
           path:
             - /resources
             - /test-resources
+            - /image
           url: https://ui5.sap.com
         backend:
           - path: /sap
@@ -29,5 +30,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: student02.com.sap.training.ux402.fiorielements.ux402fiorielements
+        component: student00.com.sap.training.ux402.fiorielements.ux402fiorielements
         ui5Theme: sap_fiori_3

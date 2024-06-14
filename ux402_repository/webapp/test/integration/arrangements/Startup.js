@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "student02.com.sap.training.ux402.repository.ux402repository",
+					name: "student02.com.sap.training.ux402.repositor.ux402repository",
 					async: true
 				},
 				hash: oOptions.hash,

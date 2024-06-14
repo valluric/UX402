@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Fri Jun 14 2024 17:49:35 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Fri Jun 14 2024 20:33:24 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-freestyle|
 |**App Generator Version**<br>1.13.6|
 |**Generation Platform**<br>SAP Business Application Studio|
@@ -10,7 +10,7 @@
 |**Service URL**<br>N/A
 |**Module Name**<br>ux402_repository|
 |**Application Title**<br>Repository-integration|
-|**Namespace**<br>student02.com.sap.training.ux402.repository|
+|**Namespace**<br>student02.com.sap.training.ux402.repositor|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.124.1|
 |**Enable Code Assist Libraries**<br>False|

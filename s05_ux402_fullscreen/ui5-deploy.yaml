@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: student04.com.sap.training.ux402.fullscreen.ux402fullscreen
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: S4D_100
+          url: http://s4d.virtual:443
+        app:
+          name: ZUX402CUSTCTR##
+          description: UiLib App of student ##
+          package: ZTRAIN_##
+          transport: <Your transport Request>

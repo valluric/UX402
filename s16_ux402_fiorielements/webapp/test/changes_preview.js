@@ -163,7 +163,7 @@ if (parseInt(version[0], 10) <= 1 && parseInt(version[1], 10) < 78) {
                                             oResult.changes = aProcessedChanges;
                                             var oLrepChange = {
                                                 changes: oResult,
-                                                componentClassName: "student02.com.sap.training.ux402.fiorielements.ux402fiorielements"
+                                                componentClassName: "student00.com.sap.training.ux402.fiorielements.ux402fiorielements"
                                             };
                                             resolve(oLrepChange);
                                         });
@@ -174,7 +174,7 @@ if (parseInt(version[0], 10) <= 1 && parseInt(version[1], 10) < 78) {
                                         oResult.changes = aProcessedChanges;
                                         var oLrepChange = {
                                             changes: oResult,
-                                            componentClassName: "student02.com.sap.training.ux402.fiorielements.ux402fiorielements"
+                                            componentClassName: "student00.com.sap.training.ux402.fiorielements.ux402fiorielements"
                                         };
                                         resolve(oLrepChange);
                                     }

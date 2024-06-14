@@ -1,26 +1,26 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Fri Jun 14 2024 15:51:24 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Tue Jan 31 2023 15:48:20 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
-|**App Generator Version**<br>1.13.6|
+|**App Generator Version**<br>1.8.5|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V2|
 |**Service Type**<br>SAP System (ABAP On Premise)|
-|**Service URL**<br>http://s4d.virtual:443/sap/opu/odata/sap/ZUX402FLIGHTUI02_CDS
+|**Service URL**<br>http://s4d.virtual:443/sap/opu/odata/sap/ZUX402FLIGHTUI04_CDS
 |**Module Name**<br>ux402_fiorielements|
-|**Application Title**<br>fiorieliments|
-|**Namespace**<br>student02.com.sap.training.ux402.fiorielements|
+|**Application Title**<br>Fiori Elements|
+|**Namespace**<br>student00.com.sap.training.ux402.fiorielements|
 |**UI5 Theme**<br>sap_fiori_3|
-|**UI5 Version**<br>1.96.29|
+|**UI5 Version**<br>1.96.16|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
-|**Main Entity**<br>ZUX402FLIGHTUI02|
+|**Main Entity**<br>ZUX402FLIGHTUI04|
 
 ## ux402_fiorielements
 
-An SAP Fiori application.
+A Fiori-elements Application.
 
 ### Starting the generated app
 

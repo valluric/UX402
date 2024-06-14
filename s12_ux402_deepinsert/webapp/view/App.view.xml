@@ -1,0 +1,5 @@
+<mvc:View controllerName="com.sap.training.ux402.deepinsert.ux402_deepinsert.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App id="app"
+		busy="{appView>/busy}"
+		busyIndicatorDelay="{appView>/delay}"/>
+</mvc:View>

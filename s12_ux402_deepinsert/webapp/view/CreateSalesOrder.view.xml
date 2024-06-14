@@ -1,0 +1,111 @@
+<mvc:View controllerName="com.sap.training.ux402.deepinsert.ux402_deepinsert.controller.CreateSalesOrder" xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout" xmlns="sap.m">
+	<Page class="sapUiFioriObjectPage" navButtonPress="onNavBack" showNavButton="true">
+		<content>
+			<form:SimpleForm editable="true">
+				<form:content>
+					<core:Title text="Create Sales Order"></core:Title>
+					<Label text="Customer ID">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData minWidth="192" weight="3"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Label>
+					<Input id="CustomerID" value="{createCollection>/CustomerID}" width="50%" editable="false">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData weight="5"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Input>
+					<Label text="Customer Name">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData minWidth="192" weight="3"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Label>
+					<Input id="CustomerName" value="{createCollection>/CustomerName}" width="50%" editable="false">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData weight="5"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Input>
+					<Label text="Note">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData minWidth="192" weight="3"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Label>
+					<Input id="note" value="{createCollection>/Note}" width="50%">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData weight="5"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Input>
+					<Label text="Currency Code">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData minWidth="192" weight="3"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Label>
+					<Input id="currencyCode" value="{createCollection>/CurrencyCode}" width="50%">
+						<layoutData>
+							<layout:ResponsiveFlowLayoutData weight="5"></layout:ResponsiveFlowLayoutData>
+						</layoutData>
+					</Input>
+				</form:content>
+			</form:SimpleForm>
+			<Table class="navTableControlLayout" growing="true" growingScrollToLoad="true" id="createTable" items="{createCollection>/ToLineItems}">
+				<headerToolbar id="catalogTable_headerToolbar">
+					<Toolbar id="tableToolbar">
+						<Label class="sapMH4FontSize" id="catalogTitle" text="Line Items"/>
+						<ToolbarSpacer id="toolbarSpacer"/>
+						<Button icon="sap-icon://add" press="addSalesOrderLI" tooltip="Add"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns id="liTable_columns">
+					<Column hAlign="Left" id="catalogTable_col1">
+						<header id="catalogTable_col1_header">
+							<Label id="catalogTable_col1_label" text="Line Item Number"/>
+						</header>
+					</Column>
+					<Column hAlign="Left" id="catalogTable_col2id">
+						<header id="catalogTable_col2id_header">
+							<Label id="catalogTable_col2id_label" text="Product ID"/>
+						</header>
+					</Column>
+					<Column hAlign="Left" id="catalogTable_col2">
+						<header id="catalogTable_col2_header">
+							<Label id="catalogTable_col2_label" text="Note"/>
+						</header>
+					</Column>
+					<!--<Column demandPopin="true" hAlign="Right" id="catalogTable_col3">
+						<header id="catalogTable_col3_header">
+							<Label id="catalogTable_col3_label" text="Gross Amt."/>
+						</header>
+					</Column>-->
+					<Column hAlign="Right" id="catalogTable_col4">
+						<header id="catalogTable_col4_header">
+							<Label id="catalogTable_col4_label" text="Quantity"/>
+						</header>
+					</Column>
+				</columns>
+				<ColumnListItem class="navTableItemLayout" id="columnListItem" press="onLineItemPressed" type="Navigation" vAlign="Middle">
+					<cells id="columnListItem_cells">
+						<Text id="columnListItem_cell_0" maxLines="2" text="{createCollection>ItemPosition}"></Text>
+						<ComboBox id="addProductID" items="{path:'/ProductSet'}" selectedKey="{createCollection>ProductID}" enabled="false" change="onChange">
+							<items>
+								<core:Item key="{ProductID}" text="{ProductID} {Name}"/>
+							</items>
+						</ComboBox>
+						<Text id="columnListItem_cell_2" maxLines="2" text="{createCollection>Note}"></Text>
+						<!--<ObjectNumber id="columnListItem_cell_3"
+							number="{parts:[{path:'createCollection>GrossAmount'}, {path:'createCollection>CurrencyCode'}], formatter: 'sap.ca.ui.model.format.AmountFormat.FormatAmountStandard'}"
+							unit="{createCollection>CurrencyCode}"></ObjectNumber>-->
+						<ObjectNumber id="columnListItem_cell_4" number="{createCollection>Quantity}" unit="{createCollection>QuantityUnit}"></ObjectNumber>
+					</cells>
+				</ColumnListItem>
+			</Table>
+		</content>
+		<footer>
+			<Toolbar id="footerBar" translucent="true">
+				<ToolbarSpacer/>
+				<Button press="onSOSave" text="Save" type="Accept"/>
+				<Button press="onSOCancel" text="Cancel" type="Cancel"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

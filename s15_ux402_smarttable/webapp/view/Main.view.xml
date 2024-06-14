@@ -1,0 +1,25 @@
+<mvc:View controllerName="student00.com.sap.training.ux402.smarttable.ux402smarttable.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+>
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="FlightSet">
+      	        <smartFilterBar:controlConfiguration>
+         	        <smartFilterBar:ControlConfiguration id="controlConfiguration"
+                            key="Flight" visibleInAdvancedArea="true"
+                            preventInitialDataFetchInValueHelpDialog="false" >
+                    </smartFilterBar:ControlConfiguration>                                
+                </smartFilterBar:controlConfiguration>
+            </smartFilterBar:SmartFilterBar>
+            <smartTable:SmartTable id="smartTable_ResponsiveTable" tableType="ResponsiveTable" 
+                            editable="false" entitySet="FlightSet"
+                            header="Flights" showRowCount="true" useExportToExcel="true"
+                            enableAutoBinding="true" >
+      
+		    </smartTable:SmartTable>
+        </content>
+    </Page>
+</mvc:View>
